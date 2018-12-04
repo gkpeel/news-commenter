@@ -1,3 +1,4 @@
-html {
+html, body {
     background-color: rebeccapurple !important;
+    color: #fff;
 }
