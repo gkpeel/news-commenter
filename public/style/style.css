@@ -1,4 +1,99 @@
-html, body {
-    background-color: rebeccapurple !important;
+body {
+    background: 
+    linear-gradient(hsla(221, 73%, 51%, 0.8), 
+                    hsla(221, 73%, 51%, 0.8)),
+    url('../img/earth-bg.jpg');
+    background-position: center;
+    background-size: cover;
     color: #fff;
+    height: 100vh;
+}
+
+.main-wrapper {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sidebar__container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar__container h2{
+    background-color: hsl(157, 6%, 18%);
+    padding: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.heading {
+    margin-bottom: 0;
+}
+
+#all-articles {
+    padding: 2rem;
+    height: calc(100vh - 270px);
+    overflow: scroll;
+}
+
+#article-preview {
+    display: none;
+    flex: 1 0 auto;
+    background-color: #fafafa;
+    padding: 2rem 3rem;
+    color: #444;
+    max-height: 100%;
+    overflow: scroll;
+}
+
+.item {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.body__container {
+    flex: 1 0 70%;
+    background-color: rgba(255,255,255,0.8);
+    overflow: scroll;
+}
+
+.article__container {
+    height: 100%;
+    position: relative;
+}
+
+.new-scrape__screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+
+.comment-section__single {
+    background: #eee;
+    margin-bottom: .5rem;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.comment-section__delete {
+    text-align: right;
+    cursor: pointer;
+    color: hsl(0, 50%, 50%) !important;
+}
+
+.main-story {
+    column-count: 3
 }

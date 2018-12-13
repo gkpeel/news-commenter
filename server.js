@@ -1,5 +1,11 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var mongoose = require("mongoose");
+var axios = require("axios");
+var cheerio = require("cheerio");
+
+// Require all models
+var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -7,6 +13,10 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
+
+// Connect to the Mongo DB
+mongoose.connect("mongodb://localhost/newsCommenter", { useNewUrlParser: true });
+
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
