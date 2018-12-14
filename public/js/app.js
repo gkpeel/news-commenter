@@ -68,6 +68,7 @@ $(document).on('click', '.item', function (e) {
         url: '/api/articles/' + objectID,
     }).then(function (data) {
         console.log(data);
+        $('.scrape-button__mini, .scrape-button__mini::before').addClass('active');
         $('#article-preview').empty().css('display', 'block');
         $('.new-scrape__screen').css('display', 'none');
         var preview = buildArticle(data);

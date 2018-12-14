@@ -7,6 +7,7 @@ var ArticleSchema = new Schema({
     },
     link: {
         type: String,
+        unique: true
     },
     comments: [
         {
@@ -17,20 +18,5 @@ var ArticleSchema = new Schema({
 });
 
 var Article = mongoose.model("Article", ArticleSchema);
-
-ArticleSchema.pre("save", function (next, done) {
-    var self = this;
-    mongoose.models["Article"].findOne({ link: self.link }, function (err, user) {
-        if (err) {
-            done(err);
-        } else if (user) {
-            self.invalidate("username", "username must be unique");
-            done(new Error("username must be unique"));
-        } else {
-            done();
-        }
-    });
-    next();
-});
 
 module.exports = Article;

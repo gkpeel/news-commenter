@@ -21,6 +21,7 @@ body {
 .sidebar__container {
     padding-left: 0;
     padding-right: 0;
+    position: relative;
 }
 
 .sidebar__container h2{
@@ -97,3 +98,32 @@ body {
 .main-story {
     column-count: 3
 }
+
+.active .scrape-button__mini::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0ac";
+    font-size: 30px;
+    margin-top: -6px;
+    margin-left: 2px;
+  }
+
+  .scrape-button__mini {
+      position: absolute;
+      height: 32px;
+      width: 32px;
+      background-color: white;
+      border-radius: 50%;
+      top: 2.5rem;
+      right: 2.5rem;
+      display: none;
+  }
+
+  .active {
+      display: block;
+  }
