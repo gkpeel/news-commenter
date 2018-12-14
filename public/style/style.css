@@ -33,6 +33,11 @@ body {
 
 .heading {
     margin-bottom: 0;
+    color: #fff;
+}
+
+.heading-link:hover {
+    color: #fff;
 }
 
 #all-articles {
